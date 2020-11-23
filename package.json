@@ -1,0 +1,15 @@
+{
+  "name": "cctp623",
+  "version": "1.0.0",
+  "description": "Super Magic School of Awesome",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
