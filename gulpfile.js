@@ -1,21 +1,24 @@
 'use strict';
 
 // Define libraries.
-const gulp        = require( 'gulp' ),
-      babel       = require( 'gulp-babel' ),
-      concat      = require( 'gulp-concat' ),
-      sass        = require( 'gulp-sass' );
+const gulp   = require( 'gulp' ),
+      babel  = require( 'gulp-babel' ),
+      concat = require( 'gulp-concat' ),
+      sass   = require( 'gulp-sass' );
 
 // Define Sass compiler.
-sass.compiler     = require( 'node-sass' );
+sass.compiler = require( 'node-sass' );
 
 // Define CSS source and distribution directories.
-const cssSrc   = './src/sass/**/*.scss';
-const cssDist    = './dist/css';
+const cssSrc  = './src/sass/**/*.scss';
+const cssDist = './dist/css';
 
 // Define JS source and distribution directories.
-const jsSrc    = './src/js/**/*.js';
-const jsDist     = './dist/js';
+const jsSrc = [
+  './node_modules/jquery/dist/jquery.slim.min.js',
+  './src/js/**/*.js'
+];
+const jsDist = './dist/js';
 
 // Task to compile CSS files.
 gulp.task( 'sass', function() {
