@@ -1,0 +1,24 @@
+{
+  "characters": [
+    {
+      "name": "Ellie",
+      "gender": "nonbinary",
+      "ethnicity": "white"
+    },
+    {
+      "name": "Ivory",
+      "gender": "transfemale",
+      "ethnicity": "aapi"
+    },
+    {
+      "name": "Patti",
+      "gender": "transfemale",
+      "ethnicity": ["aapi", "white"]
+    },
+    {
+      "name": "Zachary",
+      "gender": "cismale",
+      "ethnicity": "white"
+    }
+  ]
+}
