@@ -27,6 +27,15 @@
     "photo": "patti-harrison"
   },
   {
+    "name": "Tessa",
+    "gender": "cisfemale",
+    "pronounSubject": "she",
+    "pronounObject": "her",
+    "pronounPossAdj": "her",
+    "ethnicity": "black",
+    "photo": "tessa-thompson"
+  },
+  {
     "name": "Zachary",
     "gender": "cismale",
     "pronounSubject": "he",
