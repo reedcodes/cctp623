@@ -1,7 +1,7 @@
 $(document).ready( () => {
 
   // Set the data to the people JSON file.
-  const people = '../../data/people.json';
+  const people = '/cctp623/data/people.json';
 
   // Find the submit button to remix the page.
   const remix = $( 'button.remix' );
@@ -38,7 +38,7 @@ $(document).ready( () => {
             pronounSubject = person.pronounSubject;
             pronounObject = person.pronounObject;
             pronounPossAdj = person.pronounPossAdj;
-            photo = 'photos/' + person.photo + '.jpg';
+            photo = '/cctp623/photos/' + person.photo + '.jpg';
           }
         });
 
