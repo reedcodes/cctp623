@@ -2,21 +2,25 @@
   {
     "name": "Ellie",
     "gender": "nonbinary",
-    "ethnicity": "white"
+    "ethnicity": "white",
+    "photo": "ellie-desautels"
   },
   {
     "name": "Ivory",
     "gender": "transfemale",
-    "ethnicity": "aapi"
+    "ethnicity": "aapi",
+    "photo": "ivory-aquino"
   },
   {
     "name": "Patti",
     "gender": "transfemale",
-    "ethnicity": "white"
+    "ethnicity": "white",
+    "photo": "patti-harrison"
   },
   {
     "name": "Zachary",
     "gender": "cismale",
-    "ethnicity": "white"
+    "ethnicity": "white",
+    "photo": "zachary-quinto"
   }
 ]

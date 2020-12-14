@@ -5,6 +5,7 @@ $(document).ready( () => {
 
   // Find the submit button to remix the page.
   const remix = $( 'button.remix' );
+  const restart = $( 'button.restart' );
 
   // When the "remix" button is clicked or entered...
   remix.on( 'click', ( e ) => {
@@ -16,7 +17,8 @@ $(document).ready( () => {
         ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
     // Declare other variables we need.
-    let name = '';
+    let name = '',
+        photo = '';
 
     // Grab the defined attributes from the JSON.
     $.getJSON( people, ( data ) => {
@@ -26,16 +28,22 @@ $(document).ready( () => {
         // Find the person who matches the user-selected attributes.
         if( gender === person.gender && ethnicity === person.ethnicity ) {
           name = person.name;
+          photo = 'photos/' + person.photo + '.jpg';
         }
       });
 
       // Display the remixed text.
-      $( '#name' ).html( 'Name: ' + name );
-      $( '#gender' ).html( 'Gender: ' + gender );
-      $( '#ethnicity' ).html( 'Ethnicity: ' + ethnicity );
+      $( '#story' ).addClass( 'remixed' );
+      $( '#story .name' ).html( name );
+      $( '#story .photo' ).attr( 'src', photo );
 
     });
 
+  });
+
+  // When the "restart" button is clicked or entered...
+  restart.on( 'click', ( e ) => {
+    $( '#story' ).removeClass( 'remixed' );
   });
 
 });

@@ -29,10 +29,12 @@
       <input type="radio" name="gender" id="gender-nonbinary" / value="nonbinary">
       <label id="gender-nonbinary-label" for="gender-nonbinary">Non-binary</label>
 
+      <!--
       <br/>
-
       <input type="radio" name="gender" id="gender-random" value="random" />
       <label id="gender-random-label" for="gender-random">Random</label>
+      -->
+
     </fieldset>
 
     <fieldset class="ethnicity">
@@ -53,20 +55,22 @@
       <input type="radio" name="ethnicity" id="ethnicity-hispanic" value="hispanic" />
       <label id="ethnicity-hispanic-label" for="ethnicity-hispanic">Hispanic</label>
 
+      <!--
       <br/>
-
       <input type="radio" name="ethnicity" id="ethnicity-random" value="random" />
       <label id="ethnicity-random-label" for="ethnicity-random">Random</label>
+      -->
 
     </fieldset>
 
     <button class="remix" type="submit">Remix</button>
-    <button class="cancel" type="reset">Cancel</button>
+    <button class="restart" type="reset">Restart</button>
   </form>
 
-  <p id="name"></p>
-  <p id="gender"></p>
-  <p id="ethnicity"></p>
+  <div id="story">
+    <img class="photo" src="" />
+    <p>Orci laoreet tristique <span class="attribute name">senectus</span> per parturient id nibh phasellus adipiscing venenatis proin a platea libero ullamcorper condimentum. Suspendisse pretium <span class="attribute name">ullamcorper</span> nisi consectetur a dignissim rhoncus hac augue condimentum a potenti interdum class facilisi ullamcorper nam posuere. Vestibulum diam leo vivamus a hac mus parturient parturient a adipiscing cubilia risus <span class="attribute name">commodo</span> bibendum parturient euismod torquent nostra fermentum suspendisse.</p>
+  </div>
 
   <script src="dist/js/scripts.min.js"></script>
 
