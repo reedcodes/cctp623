@@ -12,7 +12,7 @@
   {
     "name": "Patti",
     "gender": "transfemale",
-    "ethnicity": ["aapi", "white"]
+    "ethnicity": "white"
   },
   {
     "name": "Zachary",

@@ -10,55 +10,52 @@
 
   <h1>Super Magic School of Awesome</h1>
 
-  <form method="get" action="">
-    <fieldset>
+  <form class="remix" method="get" action="">
+    <fieldset class="gender">
       <legend>Gender</legend>
 
-      <input type="radio" name="gender" id="gender-cisfemale" />
+      <input type="radio" name="gender" id="gender-cisfemale" value="cisfemale" />
       <label id="gender-cisfemale-label" for="gender-cisfemale">Cis Female</label>
 
-      <input type="radio" name="gender" id="gender-cismale" />
+      <input type="radio" name="gender" id="gender-cismale" value="cismale" />
       <label id="gender-cismale-label" for="gender-cismale">Cis Male</label>
 
-      <input type="radio" name="gender" id="gender-transfemale" />
+      <input type="radio" name="gender" id="gender-transfemale" value="transfemale" />
       <label id="gender-transfemale-label" for="gender-transfemale">Trans Female</label>
 
-      <input type="radio" name="gender" id="gender-transmale" />
+      <input type="radio" name="gender" id="gender-transmale" / value="transmale">
       <label id="gender-transmale-label" for="gender-transmale">Trans Male</label>
 
-      <input type="radio" name="gender" id="gender-nonbinary" />
+      <input type="radio" name="gender" id="gender-nonbinary" / value="nonbinary">
       <label id="gender-nonbinary-label" for="gender-nonbinary">Non-binary</label>
 
       <br/>
 
-      <input type="radio" name="gender" id="gender-random" />
+      <input type="radio" name="gender" id="gender-random" value="random" />
       <label id="gender-random-label" for="gender-random">Random</label>
-
-      <input type="checkbox" name="gnc" id="gnc-yes" />
-      <label id="gnc-yes-label" for="gnc-yes">Gender Non-conforming</label>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="ethnicity">
       <legend>Race/Ethnicity</legend>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-white" />
+      <input type="radio" name="ethnicity" id="ethnicity-white" value="white" />
       <label id="ethnicity-white-label" for="ethnicity-white">White</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-black" />
+      <input type="radio" name="ethnicity" id="ethnicity-black" value="black" />
       <label id="ethnicity-black-label" for="ethnicity-black">Black</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-aapi" />
+      <input type="radio" name="ethnicity" id="ethnicity-aapi" value="aapi" />
       <label id="ethnicity-aapi-label" for="ethnicity-aapi">Asian American / Pacific Islander</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-latinx" />
+      <input type="radio" name="ethnicity" id="ethnicity-latinx" value="latinx" />
       <label id="ethnicity-latinx-label" for="ethnicity-latinx">Latinx</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-hispanic" />
+      <input type="radio" name="ethnicity" id="ethnicity-hispanic" value="hispanic" />
       <label id="ethnicity-hispanic-label" for="ethnicity-hispanic">Hispanic</label>
 
       <br/>
 
-      <input type="radio" name="ethnicity" id="ethnicity-random" />
+      <input type="radio" name="ethnicity" id="ethnicity-random" value="random" />
       <label id="ethnicity-random-label" for="ethnicity-random">Random</label>
 
     </fieldset>
@@ -67,7 +64,9 @@
     <button class="cancel" type="reset">Cancel</button>
   </form>
 
-  <div id="remixed"></div>
+  <p id="name"></p>
+  <p id="gender"></p>
+  <p id="ethnicity"></p>
 
   <script src="dist/js/scripts.min.js"></script>
 
