@@ -14,18 +14,18 @@ $(document).ready( () => {
     let gender = $( 'fieldset.gender input:checked' ).val(),
         ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
+    // Declare some variables we need.
+    let name,
+        pronounSubject,
+        pronounObject,
+        pronounPossAdj,
+        photo;
+
     // Only remix the story if there are selected values...
     if( gender != null && ethnicity != null ) {
 
       // Stop the default behavior so we can run the remixes.
       e.preventDefault();
-
-      // Declare some variables we need.
-      let name,
-          pronounSubject,
-          pronounObject,
-          pronounPossAdj,
-          photo;
 
       // Grab the defined attributes from the JSON.
       $.getJSON( people, ( data ) => {
@@ -42,13 +42,21 @@ $(document).ready( () => {
           }
         });
 
-        // Display the remixed text.
-        $( '#story' ).addClass( 'remixed' );
-        $( '#story .name' ).html( name );
-        $( '#story .pronoun-subject' ).html( pronounSubject );
-        $( '#story .pronoun-object' ).html( pronounObject );
-        $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
-        $( '#story .photo' ).attr( 'src', photo );
+        if( name ) {
+          // Display the remixed text.
+          $( '#none' ).hide();
+          $( '#story' ).show();
+
+          $( '#story .name' ).html( name );
+          $( '#story .pronoun-subject' ).html( pronounSubject );
+          $( '#story .pronoun-object' ).html( pronounObject );
+          $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
+          $( '#story .photo' ).attr( 'src', photo );
+        } else {
+          // Display the "choose again".
+          $( '#none' ).show();
+          $( '#story' ).hide();
+        }
 
       });
     }
@@ -57,7 +65,7 @@ $(document).ready( () => {
 
   // When the "restart" button is clicked or entered...
   restart.on( 'click', ( e ) => {
-    $( '#story' ).removeClass( 'remixed' );
+    $( '#none, #story' ).hide();
   });
 
 });
