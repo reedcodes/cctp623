@@ -1,5 +1,14 @@
 [
   {
+    "name": "D'Lo",
+    "gender": "transmale",
+    "pronounSubject": "he",
+    "pronounObject": "him",
+    "pronounPossAdj": "his",
+    "ethnicity": "aapi",
+    "photo": "dlo"
+  },
+  {
     "name": "Ellie",
     "gender": "nonbinary",
     "pronounSubject": "they",
@@ -7,6 +16,15 @@
     "pronounPossAdj": "their",
     "ethnicity": "white",
     "photo": "ellie-desautels"
+  },
+  {
+    "name": "Harvey",
+    "gender": "cismale",
+    "pronounSubject": "he",
+    "pronounObject": "him",
+    "pronounPossAdj": "his",
+    "ethnicity": "latinx",
+    "photo": "harvey-guillen"
   },
   {
     "name": "Ivory",
