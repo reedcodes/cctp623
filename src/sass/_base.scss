@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 24px;
+  line-height: 2;
+  font-family: $sans-serif;
+}
+
 body {
   width: 100vw;
   max-width: 100%;
@@ -9,18 +15,40 @@ body {
   padding: 1rem 2rem;
   background: $white;
   color: $black;
-  font-size: 24px;
-  line-height: 2;
-  font-family: $sans-serif;
 }
 
 h1 {
+  margin: 0;
   font-size: 3rem;
   font-weight: 400;
   font-family: $decorative;
 }
 
+fieldset {
+  margin-bottom: 1rem;
+}
 
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 2px solid $red;
+  font-size: 1rem;
+  font-family: $sans-serif;
+
+  &:hover {
+    box-shadow: inset 1px 1px 1px 0px $black;
+  }
+
+  &.remix {
+    background-color: lighten( $red, 15% );
+    color: $white;
+  }
+
+  &.restart {
+    background-color: $gray;
+    color: $red;
+  }
+}
 
 #none,
 #story {
