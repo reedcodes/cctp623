@@ -1,0 +1,65 @@
+[
+  {
+    "name": "D'Lo",
+    "gender": "transmale",
+    "pronounSubject": "he",
+    "pronounObject": "him",
+    "pronounPossAdj": "his",
+    "ethnicity": "aapi",
+    "photo": "dlo"
+  },
+  {
+    "name": "Ellie",
+    "gender": "nonbinary",
+    "pronounSubject": "they",
+    "pronounObject": "them",
+    "pronounPossAdj": "their",
+    "ethnicity": "white",
+    "photo": "ellie-desautels"
+  },
+  {
+    "name": "Harvey",
+    "gender": "cismale",
+    "pronounSubject": "he",
+    "pronounObject": "him",
+    "pronounPossAdj": "his",
+    "ethnicity": "latinx",
+    "photo": "harvey-guillen"
+  },
+  {
+    "name": "Ivory",
+    "gender": "transfemale",
+    "pronounSubject": "she",
+    "pronounObject": "her",
+    "pronounPossAdj": "her",
+    "ethnicity": "aapi",
+    "photo": "ivory-aquino"
+  },
+  {
+    "name": "Patti",
+    "gender": "transfemale",
+    "pronounSubject": "she",
+    "pronounObject": "her",
+    "pronounPossAdj": "her",
+    "ethnicity": "white",
+    "photo": "patti-harrison"
+  },
+  {
+    "name": "Tessa",
+    "gender": "cisfemale",
+    "pronounSubject": "she",
+    "pronounObject": "her",
+    "pronounPossAdj": "her",
+    "ethnicity": "black",
+    "photo": "tessa-thompson"
+  },
+  {
+    "name": "Zachary",
+    "gender": "cismale",
+    "pronounSubject": "he",
+    "pronounObject": "him",
+    "pronounPossAdj": "his",
+    "ethnicity": "white",
+    "photo": "zachary-quinto"
+  }
+]

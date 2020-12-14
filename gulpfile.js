@@ -15,7 +15,7 @@ const cssDist = './dist/css';
 
 // Define JS source and distribution directories.
 const jsSrc = [
-  './node_modules/jquery/dist/jquery.slim.min.js',
+  './node_modules/jquery/dist/jquery.min.js',
   './src/js/**/*.js'
 ];
 const jsDist = './dist/js';

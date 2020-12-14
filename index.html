@@ -10,67 +10,73 @@
 
   <h1>Super Magic School of Awesome</h1>
 
-  <form>
-    <fieldset>
+  <form class="remix" method="get" action="">
+    <fieldset class="gender">
       <legend>Gender</legend>
 
-      <input type="radio" name="gender" id="gender-cisfemale" />
+      <input required type="radio" name="gender" id="gender-cisfemale" value="cisfemale" />
       <label id="gender-cisfemale-label" for="gender-cisfemale">Cis Female</label>
 
-      <input type="radio" name="gender" id="gender-cismale" />
+      <input required type="radio" name="gender" id="gender-cismale" value="cismale" />
       <label id="gender-cismale-label" for="gender-cismale">Cis Male</label>
 
-      <input type="radio" name="gender" id="gender-transfemale" />
+      <input required type="radio" name="gender" id="gender-transfemale" value="transfemale" />
       <label id="gender-transfemale-label" for="gender-transfemale">Trans Female</label>
 
-      <input type="radio" name="gender" id="gender-transmale" />
+      <input required type="radio" name="gender" id="gender-transmale" / value="transmale">
       <label id="gender-transmale-label" for="gender-transmale">Trans Male</label>
 
-      <input type="radio" name="gender" id="gender-nonbinary" />
+      <input required type="radio" name="gender" id="gender-nonbinary" / value="nonbinary">
       <label id="gender-nonbinary-label" for="gender-nonbinary">Non-binary</label>
 
-      <input type="radio" name="gender" id="gender-random" />
-      <label id="gender-random-label" for="gender-random">Random</label>
-
+      <!--
       <br/>
+      <input required type="radio" name="gender" id="gender-random" value="random" />
+      <label id="gender-random-label" for="gender-random">Random</label>
+      -->
 
-      <input type="checkbox" name="gnc" id="gnc-yes" />
-      <label id="gnc-yes-label" for="gnc-yes">Gender Non-conforming</label>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="ethnicity">
       <legend>Race/Ethnicity</legend>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-white" />
+      <input required type="radio" name="ethnicity" id="ethnicity-white" value="white" />
       <label id="ethnicity-white-label" for="ethnicity-white">White</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-black" />
+      <input required type="radio" name="ethnicity" id="ethnicity-black" value="black" />
       <label id="ethnicity-black-label" for="ethnicity-black">Black</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-aapi" />
+      <input required type="radio" name="ethnicity" id="ethnicity-aapi" value="aapi" />
       <label id="ethnicity-aapi-label" for="ethnicity-aapi">Asian American / Pacific Islander</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-latinx" />
-      <label id="ethnicity-latinx-label" for="ethnicity-latinx">Latinx</label>
+      <input required type="radio" name="ethnicity" id="ethnicity-latinx" value="latinx" />
+      <label id="ethnicity-latinx-label" for="ethnicity-latinx">Latinx / Hispanic</label>
 
-      <input type="checkbox" name="ethnicity" id="ethnicity-hispanic" />
-      <label id="ethnicity-hispanic-label" for="ethnicity-hispanic">Hispanic</label>
-
-      <input type="radio" name="ethnicity" id="ethnicity-random" />
+      <!--
+      <br/>
+      <input required type="radio" name="ethnicity" id="ethnicity-random" value="random" />
       <label id="ethnicity-random-label" for="ethnicity-random">Random</label>
+      -->
 
     </fieldset>
 
-    <button type="reset">Reset</button>
+    <button class="remix" type="submit">Remix</button>
+    <button class="restart" type="reset">Restart</button>
   </form>
 
-  <p>"To cure the soul by means of the senses, and the senses by means of the soul!" How the words rang in his ears! His soul, certainly, was sick to death. Was it true that the senses could cure it? <span class="attribute">Innocent blood</span> had been spilled. What could atone for that? Ah! for that there was no atonement; but though <span class="attribute">forgiveness</span> was impossible, forgetfulness was possible still, and he was determined to forget, to stamp the thing out, to crush it as one would crush the adder that had stung one. Indeed, what right had <span class="attribute">Basil</span> to have spoken to him as he had done? Who had made him a judge over others? He had said things that were dreadful, horrible, not to be endured.</p>
+  <div id="none">
+    <p>There are no characters with your selections. Please choose again!</p>
+  </div>
 
-  <p>On and on plodded the hansom, going slower, it seemed to him, at each step. He thrust up the trap and called to the <span class="attribute">man</span> to drive faster. The hideous hunger for opium began to gnaw at him. His throat burned and his delicate hands twitched nervously together. He struck at the horse <span class="attribute">madly</span> with his stick. The driver laughed and whipped up. He laughed in answer, and the man was silent.</p>
-
-  <p>The way seemed <span class="attribute">interminable</span>, and the streets like the black web of some sprawling spider. The <span class="attribute">monotony</span> became unbearable, and as the mist thickened, he felt afraid.</p>
-
-  <p>Then they passed by lonely <span class="attribute">brickfields</span>. The fog was lighter here, and he could see the strange, bottle-shaped kilns with their orange, fanlike tongues of fire. A dog barked as they went by, and far away <span class="attribute">in the darkness</span> some wandering sea-gull screamed. The horse stumbled in a rut, then swerved aside and broke into a gallop.</p>
+  <div id="story">
+    <img class="photo" src="" />
+    <p>Perhaps it had something to do with living in a dark cupboard, but <span class="attribute name"></span> had always been small and skinny for <span class="attribute pronoun-poss-adj"></span> age. <span class="attribute pronoun-subject"></span> looked even smaller and skinner than <span class="attribute pronoun-subject"></span> really was because all <span class="attribute pronoun-subject"></span> had to wear were old clothes of Dudley's and Dudley was about four times bigger than <span class="attribute pronoun-subject"></span> was. <span class="attribute name"></span> had a thin face, knobby knees, black hair and bright-green eyes. <span class="attribute pronoun-subject"></span> wore round glasses held together with a lot of Sellotape because of all the times Dudley had punched <span class="attribute pronoun-object"></span> on the nose. The only thing <span class="attribute name"></span> liked about <span class="attribute pronoun-poss-adj"></span> own appearance was a very thin scar on <span class="attribute pronoun-poss-adj"></span> forehead, which was shaped like a bolt of lightning. <span class="attribute pronoun-subject"></span> had had it as long as <span class="attribute pronoun-subject"></span> could remember and the first question <span class="attribute pronoun-subject"></span> could ever remember asking <span class="attribute pronoun-poss-adj"></span> Aunt Petunia was how <span class="attribute pronoun-subject"></span> had got it.</p>
+    <p>"In the car crash when your parents died," she had said. "And don't ask questions."</p>
+    <p><em>Don't ask questions</em> &#8212; that was the first rule for a quiet life with the Dursleys.</p>
+    <p>Uncle Vernon entered the kitchen as <span class="attribute name"></span> was turning over the bacon.</p>
+    <p>"Comb your hair!" he barked, by way of a morning greeting.</p>
+    <p>About once a week, Uncle Vernon looked over the top of his newspaper and shouted that <span class="attribute name"></span> needed a haircut. <span class="attribute name"></span> must have had more haircuts than the rest of the <span class="attribute change">kids</span> in <span class="attribute pronoun-poss-adj"></span> class put together, but it made no difference, <span class="attribute pronoun-poss-adj"></span> hair simply grew that way &#8212; all over the place.</p>
+  </div>
 
   <script src="dist/js/scripts.min.js"></script>
 

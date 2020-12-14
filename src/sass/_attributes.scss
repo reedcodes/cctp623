@@ -1,9 +1,13 @@
 .attribute {
   display: inline-block;
   padding: 0 1.5rem 0 1rem;
-  background: yellow;
-  font-size: 2rem;
-  line-height: 1.5;
+  background-color: $yellow;
+  font-size: 1.5rem;
+  line-height: 1;
   font-weight: 600;
   font-family: 'Caveat', cursive;
+
+  &.change {
+    background-color: $green;
+  }
 }
