@@ -6,4 +6,8 @@
   line-height: 1.5;
   font-weight: 600;
   font-family: 'Caveat', cursive;
+
+  &.change {
+    background-color: $green;
+  }
 }

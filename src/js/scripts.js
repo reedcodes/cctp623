@@ -21,8 +21,11 @@ $(document).ready( () => {
       e.preventDefault();
 
       // Declare some variables we need.
-      let name = '',
-          photo = '';
+      let name,
+          pronounSubject,
+          pronounObject,
+          pronounPossAdj,
+          photo;
 
       // Grab the defined attributes from the JSON.
       $.getJSON( people, ( data ) => {
@@ -32,6 +35,9 @@ $(document).ready( () => {
           // Find the person who matches the user-selected attributes.
           if( gender === person.gender && ethnicity === person.ethnicity ) {
             name = person.name;
+            pronounSubject = person.pronounSubject;
+            pronounObject = person.pronounObject;
+            pronounPossAdj = person.pronounPossAdj;
             photo = 'photos/' + person.photo + '.jpg';
           }
         });
@@ -39,6 +45,9 @@ $(document).ready( () => {
         // Display the remixed text.
         $( '#story' ).addClass( 'remixed' );
         $( '#story .name' ).html( name );
+        $( '#story .pronoun-subject' ).html( pronounSubject );
+        $( '#story .pronoun-object' ).html( pronounObject );
+        $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
         $( '#story .photo' ).attr( 'src', photo );
 
       });
