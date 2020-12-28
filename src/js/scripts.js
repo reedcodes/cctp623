@@ -3,16 +3,12 @@ $(document).ready( () => {
   // Set the data to the people JSON file.
   const people = '/cctp623/data/people.json';
 
-  // Find the submit button to remix the page.
+  // Find the buttons to remix and restart the app.
   const remix = $( 'button.remix' );
   const restart = $( 'button.restart' );
 
   // When the "remix" button is clicked or entered...
   remix.on( 'click', ( e ) => {
-
-    // Grab the user-selected attributes from the form.
-    let gender = $( 'fieldset.gender input:checked' ).val(),
-        ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
     // Declare some variables we need.
     let name,
@@ -20,6 +16,10 @@ $(document).ready( () => {
         pronounObject,
         pronounPossAdj,
         photo;
+
+    // Grab the user-selected attributes from the form.
+    let gender = $( 'fieldset.gender input:checked' ).val(),
+        ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
     // Only remix the story if there are selected values...
     if( gender != null && ethnicity != null ) {
@@ -43,19 +43,22 @@ $(document).ready( () => {
         });
 
         if( name ) {
-          // Display the remixed text.
-          $( '#none' ).hide();
-          $( '#story' ).show();
+          // Load the correct story piece.
+          $( '#story .text' ).load( '/cctp623/stories/ss-intro-harry.html', () => {
 
-          $( '#story .name' ).html( name );
-          $( '#story .pronoun-subject' ).html( pronounSubject );
-          $( '#story .pronoun-object' ).html( pronounObject );
-          $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
-          $( '#story .photo' ).attr( 'src', photo );
+            // Change the selected words with the remixed text.
+            $( '#story .name' ).html( name );
+            $( '#story .pronoun-subject' ).html( pronounSubject );
+            $( '#story .pronoun-object' ).html( pronounObject );
+            $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
+
+            // Insert the appropriate image for the character.
+            $( '#story .photo' ).attr( 'src', photo ).show();
+          } );
         } else {
-          // Display the "choose again".
-          $( '#none' ).show();
-          $( '#story' ).hide();
+          // Display the "choose again" if there are no matches.
+          $( '#story .photo' ).hide();
+          $( '#story .text' ).load( '/cctp623/stories/none.html' );
         }
 
       });
