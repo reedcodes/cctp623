@@ -5,11 +5,11 @@
   "author": "Reed Piernock",
   "homepage": "https://reedcodes.github.io/cctp623/",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/reedcodes/cctp623"
+    "type": "git",
+    "url": "https://github.com/reedcodes/cctp623"
   },
   "bugs": {
-    "url" : "https://github.com/reedcodes/cctp623/issues"
+    "url": "https://github.com/reedcodes/cctp623/issues"
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
@@ -19,6 +19,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-html-partial": "^1.0.1",
     "gulp-sass": "^4.1.0",
     "jquery": "^3.5.1"
   },
