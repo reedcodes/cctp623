@@ -68,7 +68,8 @@ $(document).ready( () => {
 
   // When the "restart" button is clicked or entered...
   restart.on( 'click', ( e ) => {
-    $( '#none, #story' ).hide();
+    $( '#story .photo' ).hide();
+    $( '#story .text' ).html( '' );
   });
 
 });
