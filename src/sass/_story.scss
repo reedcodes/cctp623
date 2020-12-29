@@ -1,0 +1,27 @@
+.text {
+  line-height: 2;
+  text-indent: 2.5rem;
+}
+
+.photo {
+  float: right;
+  max-height: 400px;
+  margin: 1rem 0 2.5rem 2.5rem;
+  border: 1px solid $black;
+  border-radius: 125px;
+}
+
+.attribute {
+  display: inline-block;
+  padding: 0 1.5rem 0 1rem;
+  background-color: $yellow;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  font-family: 'Caveat', cursive;
+  text-indent: 0;
+
+  &.change {
+    background-color: lighten( $green, 55% );
+  }
+}
