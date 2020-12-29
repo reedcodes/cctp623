@@ -18,7 +18,8 @@ $(document).ready( () => {
         photo;
 
     // Grab the user-selected attributes from the form.
-    let gender = $( 'fieldset.gender input:checked' ).val(),
+    let original = $( 'fieldset.original input:checked' ).val(),
+        gender = $( 'fieldset.gender input:checked' ).val(),
         ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
     // Only remix the story if there are selected values...
@@ -44,7 +45,7 @@ $(document).ready( () => {
 
         if( name ) {
           // Load the correct story piece.
-          $( '#story .text' ).load( '/cctp623/stories/ss-intro-harry.html', () => {
+          $( '#story .text' ).load( '/cctp623/stories/ss-intro-' + original + '.html', () => {
 
             // Change the selected words with the remixed text.
             $( '#story .name' ).html( name );
