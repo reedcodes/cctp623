@@ -54,7 +54,10 @@ $(document).ready( () => {
             $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
 
             // Insert the appropriate image for the character.
-            $( '#story .photo' ).attr( 'src', photo ).show();
+            $( '#story .photo' )
+              .attr( 'src', photo )
+              .attr( 'alt', name )
+              .show();
           } );
         } else {
           // Display the "choose again" if there are no matches.
