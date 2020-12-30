@@ -10,6 +10,9 @@ $(document).ready( () => {
   // When the "remix" button is clicked or entered...
   remix.on( 'click', ( e ) => {
 
+    // Clear the highlights, if there are any.
+    $( '#story .attribute' ).removeClass( 'highlight' );
+
     // Declare some variables we need.
     let name,
         pronounSubject,
@@ -18,9 +21,10 @@ $(document).ready( () => {
         photo;
 
     // Grab the user-selected attributes from the form.
-    let original = $( 'fieldset.original input:checked' ).val(),
-        gender = $( 'fieldset.gender input:checked' ).val(),
-        ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
+    let original = $( 'fieldset.original input[ type="radio" ]:checked' ).val(),
+        same = $( 'fieldset.original input[ type="checkbox" ]:checked' ).val(),
+        gender = $( 'fieldset.gender input[ type="radio" ]:checked' ).val(),
+        ethnicity = $( 'fieldset.ethnicity input[ type="radio" ]:checked' ).val();
 
     // Only remix the story if there are selected values...
     if( original != null && gender != null && ethnicity != null ) {
@@ -45,14 +49,22 @@ $(document).ready( () => {
 
         // If we have a person...
         if( name ) {
+          // If "same story" is selected...
+          let story = same ? same : original;
+
           // Load the correct story piece.
-          $( '#story .text' ).load( '/cctp623/stories/' + original + '.html', () => {
+          $( '#story .text' ).load( '/cctp623/stories/' + story + '.html', () => {
+
+            // Add a class to the selected character.
+            $( '#story .' + original ).addClass( 'highlight' );
+
+            // Change the correct character's name only.
+            $( '#story .name.' + original ).html( name );
 
             // Change the selected words with the remixed text.
-            $( '#story .name' ).html( name );
-            $( '#story .pronoun-subject' ).html( pronounSubject );
-            $( '#story .pronoun-object' ).html( pronounObject );
-            $( '#story .pronoun-poss-adj' ).html( pronounPossAdj );
+            $( '#story .pronoun-subject.' + original ).html( pronounSubject );
+            $( '#story .pronoun-object.' + original ).html( pronounObject );
+            $( '#story .pronoun-poss-adj.' + original ).html( pronounPossAdj );
 
             // Insert the appropriate image for the character.
             $( '#story .photo' )
@@ -78,6 +90,7 @@ $(document).ready( () => {
       .attr( 'src', '' )
       .attr( 'alt', '' )
       .hide();
+
     // Remove the text from the story.
     $( '#story .text' ).html( '' );
   });

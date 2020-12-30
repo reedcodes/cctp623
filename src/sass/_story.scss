@@ -1,6 +1,10 @@
 .text {
   line-height: 2;
-  text-indent: 2.5rem;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .photo {
@@ -13,16 +17,18 @@
 }
 
 .attribute {
-  display: inline-block;
-  padding: 0 1.5rem 0 1rem;
-  background-color: $yellow;
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 600;
-  font-family: 'Caveat', cursive;
-  text-indent: 0;
+  border-bottom: 2px solid $red;
 
+  &.highlight,
   &.change {
-    background-color: lighten( $green, 55% );
+    display: inline-block;
+    padding: 0 1.5rem 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'Caveat', cursive;
   }
+
+  &.highlight { background-color: $yellow; }
+  &.change { background-color: lighten( $green, 55% ); }
 }
