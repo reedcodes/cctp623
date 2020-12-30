@@ -23,7 +23,7 @@ $(document).ready( () => {
         ethnicity = $( 'fieldset.ethnicity input:checked' ).val();
 
     // Only remix the story if there are selected values...
-    if( gender != null && ethnicity != null ) {
+    if( original != null && gender != null && ethnicity != null ) {
 
       // Stop the default behavior so we can run the remixes.
       e.preventDefault();
@@ -43,6 +43,7 @@ $(document).ready( () => {
           }
         });
 
+        // If we have a person...
         if( name ) {
           // Load the correct story piece.
           $( '#story .text' ).load( '/cctp623/stories/ss-intro-' + original + '.html', () => {
@@ -72,7 +73,12 @@ $(document).ready( () => {
 
   // When the "restart" button is clicked or entered...
   restart.on( 'click', ( e ) => {
-    $( '#story .photo' ).hide();
+    // Remove the attributes for the photo.
+    $( '#story .photo' )
+      .attr( 'src', '' )
+      .attr( 'alt', '' )
+      .hide();
+    // Remove the text from the story.
     $( '#story .text' ).html( '' );
   });
 
