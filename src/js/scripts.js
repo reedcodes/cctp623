@@ -15,9 +15,14 @@ $(document).ready( () => {
 
     // Declare some variables we need.
     let name,
+        title,
+        child,
+        sibling,
         pronounSubject,
         pronounObject,
         pronounPossAdj,
+        pronounBeingPresent,
+        pronounBeingPast,
         photo;
 
     // Grab the user-selected attributes from the form.
@@ -40,9 +45,14 @@ $(document).ready( () => {
           // Find the person who matches the user-selected attributes.
           if( gender === person.gender && ethnicity === person.ethnicity ) {
             name = person.name;
+            title = person.title;
+            child = person.child;
+            sibling = person.sibling;
             pronounSubject = person.pronounSubject;
             pronounObject = person.pronounObject;
             pronounPossAdj = person.pronounPossAdj;
+            pronounBeingPresent = person.pronounBeingPresent;
+            pronounBeingPast = person.pronounBeingPast;
             photo = '/cctp623/photos/' + person.photo + '.jpg';
           }
         });
@@ -58,13 +68,18 @@ $(document).ready( () => {
             // Add a class to the selected character.
             $( '#story .' + original ).addClass( 'highlight' );
 
-            // Change the correct character's name only.
+            // Change the correct character's name and attributes.
             $( '#story .name.' + original ).html( name );
+            $( '#story .title.' + original ).html( title );
+            $( '#story .child.' + original ).html( child );
+            $( '#story .sibling.' + original ).html( sibling );
 
-            // Change the selected words with the remixed text.
+            // Change the selected pronouns for the selected character.
             $( '#story .pronoun-subject.' + original ).html( pronounSubject );
             $( '#story .pronoun-object.' + original ).html( pronounObject );
             $( '#story .pronoun-poss-adj.' + original ).html( pronounPossAdj );
+            $( '#story .pronoun-being-present.' + original ).html( pronounBeingPresent );
+            $( '#story .pronoun-being-past.' + original ).html( pronounBeingPast );
 
             // Insert the appropriate image for the character.
             $( '#story .photo' )
