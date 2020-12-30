@@ -46,7 +46,7 @@ $(document).ready( () => {
         // If we have a person...
         if( name ) {
           // Load the correct story piece.
-          $( '#story .text' ).load( '/cctp623/stories/ss-intro-' + original + '.html', () => {
+          $( '#story .text' ).load( '/cctp623/stories/' + original + '.html', () => {
 
             // Change the selected words with the remixed text.
             $( '#story .name' ).html( name );

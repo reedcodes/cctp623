@@ -21,6 +21,10 @@ label {
   display: block;
   margin-left: 1rem;
   text-indent: -1rem;
+
+  &.same {
+    margin-top: 1rem;
+  }
 }
 
 input {
