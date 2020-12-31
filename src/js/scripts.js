@@ -8,8 +8,7 @@ $(document).ready( () => {
   const restart = $( 'button.restart' );
 
   // Declare the delay time.
-  let delayLoad = 1000;
-  let delayStory = 1250;
+  const delayLoad = 1000;
 
   // When the "remix" button is clicked or entered...
   remix.on( 'click', ( e ) => {
@@ -46,6 +45,9 @@ $(document).ready( () => {
       // Stop the default behavior so we can run the remixes.
       e.preventDefault();
 
+      // Show the loading message.
+      $( '.loading' ).fadeIn().addClass( 'load' );
+
       setTimeout( () => {
 
         // Grab the defined attributes from the JSON.
@@ -72,6 +74,13 @@ $(document).ready( () => {
           if( name ) {
             // If "same story" is selected...
             let story = same ? same : original;
+
+            // Hide the loading message.
+            $( '.loading' ).fadeOut( delayLoad / 10 );
+
+            setTimeout( () => {
+              $( '.loading' ).removeClass( 'load' );
+            }, delayLoad );
 
             // Load the correct story piece.
             $( '#story' ).fadeIn( delayLoad ).delay( delayLoad );
@@ -100,6 +109,13 @@ $(document).ready( () => {
                 .show();
             } );
           } else {
+            // Hide the loading message.
+            $( '.loading' ).fadeOut( delayLoad / 10 );
+
+            setTimeout( () => {
+              $( '.loading' ).removeClass( 'load' );
+            }, delayLoad );
+
             // Display the "choose again" if there are no matches.
             $( '#story' ).fadeIn( delayLoad ).delay( delayLoad );
             $( '#story .photo' ).hide();
@@ -107,7 +123,7 @@ $(document).ready( () => {
           }
 
         });
-      }, delayStory );
+      }, delayLoad );
     }
 
   });
