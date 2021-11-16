@@ -5,7 +5,7 @@ const gulp   = require( 'gulp' ),
       babel  = require( 'gulp-babel' ),
       concat = require( 'gulp-concat' ),
       html   = require( 'gulp-html-partial' ),
-      sass   = require( 'gulp-sass' );
+      sass   = require( 'gulp-sass' )( require( 'node-sass' ) );
 
 // Define Sass compiler.
 sass.compiler = require( 'node-sass' );

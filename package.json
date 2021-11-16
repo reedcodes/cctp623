@@ -13,15 +13,16 @@
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "babel-preset-minify": "^0.5.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-partial": "^1.0.1",
-    "gulp-sass": "^4.1.0",
-    "jquery": "^3.6.0"
+    "gulp-sass": "^5.0.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1"
   },
   "main": "gulpfile.js",
   "scripts": {
