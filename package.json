@@ -13,14 +13,14 @@
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "@babel/core": "^7.16.0",
+    "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.16.0",
-    "babel-preset-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-partial": "^1.0.1",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "jquery": "^3.7.1",
     "node-sass": "^9.0.0"
   },
